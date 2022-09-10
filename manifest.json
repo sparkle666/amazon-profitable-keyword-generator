@@ -3,7 +3,7 @@
   "name": "Amazon Keyword Generator",
   "version": "1.0.0",
   "description": "A Keyword Generator for Amazon KDP",
-  "permissions": ["storage"],
+  "permissions": ["storage", "activeTab", "scripting"],
   "manifest_version": 3,
   "background": {
     "service_worker": "js/background.js"

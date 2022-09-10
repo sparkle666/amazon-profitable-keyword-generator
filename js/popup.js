@@ -7,14 +7,12 @@
 let changeColor = document.getElementById("changeColor")
 
 changeColor.addEventListener("click", async ()=> {
-    let [tab] = await chrome.tabs.query({active:true, currentWindow: true})
-    
-    chrome.scripting.executeScript(
-        {
-            target: { tabId: tab.id },
-            func: setPageBackgroundColor,
-        }
-    )
+    let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+    console.log(tab)
+    chrome.scripting.executeScript({
+        target: { tabId: tab.id },
+        func: setPageBackgroundColor,
+      });
 })
 
 function setPageBackgroundColor() {

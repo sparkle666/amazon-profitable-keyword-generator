@@ -1,1 +1,1 @@
-# Amazon crawler
+# Amazon keyword generator
