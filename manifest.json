@@ -1,0 +1,21 @@
+
+{
+  "name": "Amazon Keyword Generator",
+  "version": "1.0.0",
+  "description": "A Keyword Generator for Amazon KDP",
+  "permissions": ["storage"],
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon-64.png",
+      "32": "images/icon-64.png",
+      "48": "images/icon-64.png",
+      "128": "images/icon-64.png"
+    }
+  }
+ 
+}

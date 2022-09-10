@@ -1,0 +1,54 @@
+{
+  "name": "Huge Amazon Search Suggestion Expander",
+  "version": "3.1.0",
+  "description": "Huge Amazon & KDP search suggestion expander and one click download.",
+  "permissions": ["storage"],
+  "browser_action": {
+    "default_title": "Ultimate Amazon Search Suggestion Expander",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon-64.png",
+      "32": "images/icon-64.png",
+      "48": "images/icon-64.png",
+      "64": "images/icon-64.png",
+      "128": "images/icon-64.png"
+    }
+  },
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.amazon.com/*",
+        "*://*.amazon.co.uk/*",
+        "*://*.amazon.ca/*",
+        "*://*.amazon.es/*",
+        "*://*.amazon.it/*",
+        "*://*.amazon.de/*",
+        "*://*.amazon.fr/*"
+      ],
+      "all_frames": true,
+      "js": ["js/jquery-3.3.1.min.js", "js/content.js", "js/xlsx.full.min.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "16": "images/icon-64.png",
+    "32": "images/icon-64.png",
+    "48": "images/icon-64.png",
+    "64": "images/icon-64.png",
+    "128": "images/icon-64.png"
+  },
+  "manifest_version": 2,
+  "web_accessible_resources": [
+    "images/icon-64.png",
+    "images/logo.png",
+    "images/bullhorn-solid.png",
+    "images/home-solid.png",
+    "images/publishing.png",
+    "images/Download_icon.png",
+    "images/right-arrow.png"
+  ]
+}
