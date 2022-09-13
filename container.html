@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        div.__container{
+            color: black;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="__container">
+        Enter keyword:
+        <input type="text">
+        <button id="theButton">Click</button>
+    </div>
+   <script>
+        document.getElementById("theButton").addEventListener("click", () => {
+        window.postMessage({ type: "FROM_PAGE", text: "Hello from the webpage!" }, "*");
+        }, false);
+   </script>
+</body>
+</html>

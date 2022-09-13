@@ -16,6 +16,20 @@
       "48": "images/icon-64.png",
       "128": "images/icon-64.png"
     }
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.amazon.com/*"],
+      "js": ["js/content.js"],
+      "run_at": "document_idle",
+      "match_origin_as_fallback": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [ "container.html", "index.js"],
+      "matches": [ "https://*/*" ]
+    }
+  ]
  
 }
